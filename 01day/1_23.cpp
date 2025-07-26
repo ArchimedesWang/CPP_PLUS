@@ -2,21 +2,20 @@
 #include "Sales_item.h"
 
 int main(){
-	Sales_item trans1, trans2;
-	int num = 1;
-
-	if (std::cin >> trans1) {
-		while (std::cin >> trans2) {
-			if (trans1.isbn() == trans2.isbn()){
-				num++;
+	Sales_item total, trans;
+	int cnt = 1;
+	if (std::cin >> total) {
+		while (std::cin >> trans) {
+			if (total.isbn() ==  trans.isbn()) {
+				cnt++;
 			} else {
-				std::cout << trans1.isbn() << " has " << num << " numbers.";
+				std::cout << "ISBN different!" << std::endl;
 				return -1;
 			}
 		}
-		std::cout << trans1.isbn() << " has " << num << " numbers.";
+		std::cout << "Sum is " << cnt << std::endl;
 	} else {
-		std::cout << "No book!" << std::endl;
+		std::cout << "No data!" << std::endl;
 		return -1;
 	}
 
