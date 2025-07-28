@@ -1,14 +1,9 @@
 #include <iostream>
+#include <string>
+#include "Sales_data.h"
 
 int main()
 {
-	int a = 1;
-	int *p = &a;
-	int **q = &p;
+	Sales_data data1, data2;
 
-	std::cout << a << "\n" 
-		      << p << "\n"
-			  << *q << std::endl;
-
-	return 0;
 }
